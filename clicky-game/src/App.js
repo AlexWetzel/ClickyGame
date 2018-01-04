@@ -9,7 +9,8 @@ class App extends Component {
   // Set the state of the pictures and the counter
   state = {
     pictures,
-    count: 0
+    count: 0,
+    message: "Click a character to start the game!"
   };
 
   shuffle = () => {
@@ -30,34 +31,66 @@ class App extends Component {
       shuffledPictures[i] = t;
     }
 
-    this.setState({pictures: shuffledPictures})
+    this.setState({ pictures: shuffledPictures })
   }
 
   reset = () => {
-    this.setState({count: 0});
+    console.log("reset is called")
+    this.setState({ count: 0 });
+    console.log(this.state.count);
     this.state.pictures.map(picture => picture.isClicked = false);
   }
 
-  markAsClicked = pic => {
+  goodGuess = id => {
+    let c = this.state.count
+    c++
+
+    let pic = this.state.pictures.filter(picture => picture.id === id)
+
+    pic = pic[0]
+
     pic.isClicked = true;
     const index = this.state.pictures.findIndex((picture) => picture.id === pic.id);
-    const updatedPictures = update(this.state.pictures, {$splice: [[index, 1, pic]]});  // array.splice(start, deleteCount, item1)
-    this.setState({pictures: updatedPictures});
+    const updatedPictures = update(this.state.pictures, {$splice: [[index, 1, pic]]});
+    this.setState({ pictures: updatedPictures });
+
+    if (c >= 12) {
+
+      this.setState({ message: "You did it! Click again to start over." })
+    } else {
+      this.setState({ message: "Good guess!" })
+    }
+    this.setState({ count: c })
   }
 
   // Method that determines the game logic based on if a panel has been clicked
   guess = (id, isClicked) => {
+  
     // If a panel has been clicked, the game is reset
+
     if (isClicked === true) {
+
+      if (this.state.count >= 12) {
+
+
+        let gameWin = new Promise((resolve, reject) => {
+          this.reset();
+          resolve();
+        });
+
+        gameWin.then(() => {
+          this.goodGuess(id);
+        });
+
+      }
+      else {
+      this.setState({ message: "Bad guess! You have to start over." })
       this.reset()
+      }
     }
     // If a panel has not been clicked, the counter goes up
-    else {
-      this.setState({ count: this.state.count + 1 });
-      let pic = this.state.pictures.filter(picture => picture.id === id)
-      console.log(pic);
-      
-      this.markAsClicked(pic[0]);
+    else {     
+      this.goodGuess(id);
     }
 
     this.shuffle();
@@ -67,14 +100,28 @@ class App extends Component {
   render() {
     return(
       <div>
-        <nav className="navbar fixed-top navbar-dark bg-danger">
-          <p className="navbar-brand">Mario Click Game</p>
+        <nav className="navbar navbar-dark bg-danger text-white">
+          <div className="container">
+            <div className="h1">Mario Click Game</div>
+          </div>
         </nav>
         
+        <br />
 
         <div className="container">
 
-          <Counter count={this.state.count} />;
+          <div className="row">
+            <div className=" col-8">
+              <div className="card border-danger text-center mr-3">
+                <div className="card-body">
+                  <h5 className="card-title">{this.state.message}</h5>                
+                </div>
+              </div>
+            </div>
+            <Counter count={this.state.count} />
+          </div>
+
+          <br />          
           
           <div className="row jumbotron opaque">
           </div>
@@ -85,6 +132,7 @@ class App extends Component {
               key={picture.id}
               id={picture.id}
               url={picture.url}
+              name={picture.name}
               clicked={picture.isClicked}
               guess={this.guess}
             />

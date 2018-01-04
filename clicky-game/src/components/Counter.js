@@ -5,11 +5,8 @@ const Counter = props => (
 
   // The render method returns the JSX that should be rendered
 
-      <div className="panel panel-primary">
-        <div className="panel-heading">Click Counter!</div>
-        <div className="panel-body text-center">
-          <p>Click Count: {props.count}</p>
-        </div>
+      <div className="card text-white bg-danger col-3">
+        <div className="card-body h3">Score: {props.count}/12</div>
       </div>
 
 );
