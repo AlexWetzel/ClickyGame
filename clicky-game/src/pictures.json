@@ -1,0 +1,74 @@
+[
+	{
+		"id": 1,
+		"name": "Mario",
+		"url": "/pictures/mario.png",
+		"isClicked": false
+	},
+	{
+		"id": 2,
+		"name": "Luigi",
+		"url": "/pictures/luigi.png",
+		"isClicked": false
+	},
+	{
+		"id": 3,
+		"name": "Peach",
+		"url": "/pictures/peach.png",
+		"isClicked": false
+	},
+	{
+		"id": 4,
+		"name": "Yoshi",
+		"url": "/pictures/yoshi.png",
+		"isClicked": false
+	},
+	{
+		"id": 5,
+		"name": "Toad",
+		"url": "/pictures/toad.png",
+		"isClicked": false
+	},
+	{
+		"id": 6,
+		"name": "Daisy",
+		"url": "/pictures/daisy.png",
+		"isClicked": false
+	},
+	{
+		"id": 7,
+		"name": "Donkey Kong",
+		"url": "/pictures/donkey_kong.png",
+		"isClicked": false
+	},
+	{
+		"id": 8,
+		"name": "Rosalina",
+		"url": "/pictures/rosalina.png",
+		"isClicked": false
+	},
+	{
+		"id": 9,
+		"name": "Bowser",
+		"url": "/pictures/bowser.png",
+		"isClicked": false
+	},
+	{
+		"id": 10,
+		"name": "Wario",
+		"url": "/pictures/wario.png",
+		"isClicked": false
+	},
+	{
+		"id": 11,
+		"name": "Waluigi",
+		"url": "/pictures/waluigi.png",
+		"isClicked": false
+	},
+	{
+		"id": 12,
+		"name": "Shy Guy",
+		"url": "/pictures/shyguy.png",
+		"isClicked": false
+	}
+]
