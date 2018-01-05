@@ -2,19 +2,19 @@
 	{
 		"id": 1,
 		"name": "Mario",
-		"url": "mario.png",
+		"url": "./pictures/mario.png",
 		"isClicked": false
 	},
 	{
 		"id": 2,
 		"name": "Luigi",
-		"url": "https://alexwetzel.github.io/MarioClickGame/pictures/luigi.png",
+		"url": "./pictures/luigi.png",
 		"isClicked": false
 	},
 	{
 		"id": 3,
 		"name": "Peach",
-		"url": "https://alexwetzel.github.io/MarioClickGame/peach.png",
+		"url": "./pictures/peach.png",
 		"isClicked": false
 	},
 	{
