@@ -14,13 +14,13 @@
 	{
 		"id": 3,
 		"name": "Peach",
-		"url": "/pictures/peach.png",
+		"url": "./pictures/peach.png",
 		"isClicked": false
 	},
 	{
 		"id": 4,
 		"name": "Yoshi",
-		"url": "/pictures/yoshi.png",
+		"url": "./yoshi.png",
 		"isClicked": false
 	},
 	{
