@@ -8,13 +8,13 @@
 	{
 		"id": 2,
 		"name": "Luigi",
-		"url": "/pictures/luigi.png",
+		"url": "https://alexwetzel.github.io/MarioClickGame/pictures/luigi.png",
 		"isClicked": false
 	},
 	{
 		"id": 3,
 		"name": "Peach",
-		"url": "./pictures/peach.png",
+		"url": "https://alexwetzel.github.io/MarioClickGame/peach.png",
 		"isClicked": false
 	},
 	{
