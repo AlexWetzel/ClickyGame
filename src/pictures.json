@@ -26,13 +26,13 @@
 	{
 		"id": 5,
 		"name": "Toad",
-		"url": "/pictures/toad.png",
+		"url": "/toad.png",
 		"isClicked": false
 	},
 	{
 		"id": 6,
 		"name": "Daisy",
-		"url": "/pictures/daisy.png",
+		"url": "daisy.png",
 		"isClicked": false
 	},
 	{
