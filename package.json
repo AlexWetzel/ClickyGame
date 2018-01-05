@@ -9,7 +9,7 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"
   },
-  "homepage": "https://github.com/AlexWetzel/MarioClickGame",
+  "homepage": "https://AlexWetzel.github.io/MarioClickGame",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
