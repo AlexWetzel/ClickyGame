@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import update from "react-addons-update";
 import Counter from "./components/Counter";
-import update from "react-addons-update"
-import Panel from "./components/Panel"
+import Panel from "./components/Panel";
+import Message from "./components/Message";
+import Navbar from "./components/Navbar";
 import './App.css';
 import pictures from "./pictures.json";
 
@@ -74,7 +76,7 @@ class App extends Component {
     // Set the new count
     this.setState({ count: c })
   }
-
+  
   // Method that determines the game logic based on if a panel has been clicked
   guess = (id, isClicked) => {    
     // If the panel has been clicked before
@@ -90,7 +92,6 @@ class App extends Component {
         gameWin.then(() => {
           this.goodGuess(id);
         });
-
       }
       // If the panel has been clicked, and is clicked again, the game is reset
       else {
@@ -109,32 +110,15 @@ class App extends Component {
   render() {
     return(
       <div>
-        <nav className="navbar navbar-dark bg-danger text-white">
-          <div className="container">
-            <div className="h1">Mario Click Game</div>
-          </div>
-        </nav>
-        
+        <Navbar />        
         <br />
-
         <div className="container">
-
           <div className="row">
-            <div className=" col-8">
-              <div className="card border-danger text-center mr-3">
-                <div className="card-body">
-                  <h5 className="card-title">{this.state.message}</h5>                
-                </div>
-              </div>
-            </div>
+            <Message message={this.state.message} />
             <Counter count={this.state.count} />
           </div>
-
           <br />          
-          
-          <div className="row jumbotron opaque">
-          </div>
-
+          <div className="row jumbotron opaque" />
           <div className="row jumbotron clear">
           {this.state.pictures.map(picture => (
             <Panel
