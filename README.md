@@ -1,6 +1,8 @@
 # Mario Click Game
 
 Mario Click Game is a web browser game built with React.
+
+testing
  
 ## Rules
 
