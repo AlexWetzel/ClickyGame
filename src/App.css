@@ -1,7 +1,7 @@
 body {
   background-image: url("https://i.pinimg.com/originals/89/78/3b/89783b90dfc88107491f76e6f4e62149.png");
   background-size: cover;
-  background-repeat:   no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
 }
@@ -19,8 +19,6 @@ body {
 }
 
 .clear {
-  position: absolute;
-  z-index: 1;
   background: none;
 }
 
