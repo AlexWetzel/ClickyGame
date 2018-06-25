@@ -1,8 +1,8 @@
 # Mario Click Game
 
-Mario Click Game is a web browser game built with React.
+Link: https://alexwetzel.github.io/MarioClickGame/
 
-testing
+Mario Click Game is a web browser game built with React.
  
 ## Rules
 
@@ -10,6 +10,6 @@ testing
 
 -Click each character portrait to win.
 
--Clicking a portrait will shuffle each portrait's position
+-Clicking a portrait will shuffle each portrait's position.
 
--Clicking a portrait twice will reset the game
+-Clicking a portrait twice will reset the game.
